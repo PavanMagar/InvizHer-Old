@@ -82,9 +82,8 @@ header{
 #search-bar {
     border: 1px solid #ccc;
     border-radius: 1rem;
-    padding: 1rem;
+    padding: 0.7rem 1rem;
     font-size: 0.9rem;
-    width: 14rem;
     outline: none;
 }
 
@@ -100,7 +99,7 @@ header{
     cursor: pointer;
     padding: 10px 15px;
     margin-left: 1rem;
-    font-size: 1rem;
+    font-size: 0.8rem;
 }
 
 #search-button:hover {
@@ -114,6 +113,9 @@ header{
     gap: 3.5rem;
     flex-wrap: wrap;
     margin: 2rem 0;
+    background-color: #e6f2ff;
+    padding: 1.5rem 0.5rem;
+    border-radius: 1rem;
 
 }
 
@@ -126,6 +128,7 @@ header{
     border: 1px solid var(--gray-400);
     padding: 1rem;
     border-radius: 0.8rem;
+    background-color: white;
 }
 
 .category i{
