@@ -13,21 +13,25 @@
 
 body{
     margin: 0;
-    padding: 0 20%;
-    background-color: white;
-    color: var(--gray-800);
+    padding: 0;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.65);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     overflow: auto;
 }
 
-header{
+.header-container{
     width: auto;
     height: 5rem;
     padding: 0 1rem 0 1rem;
     position: sticky;
     top: 0;
     background-color: white;
-    border-bottom: 1px solid var(--gray-300);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+header{
+    margin: 0 0.8rem;
 }
 
 .header-items{
@@ -48,6 +52,9 @@ header{
     font-size: 1.8rem;
 }
 
+main{
+    
+}
 .head-content{
     width: auto;
     height: max-content;
@@ -56,7 +63,7 @@ header{
     align-items: center;
     text-align: center;
     padding: 1.5rem;
-    margin: 3rem 2rem;
+    margin: 3rem 20%;
     border: 1px solid var(--gray-400);
     border-radius: 1rem;
     background-color: #e6f2ff;
@@ -106,6 +113,64 @@ header{
     background-color: var(--gray-700);
 }
 
+.posts{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.posts h2 {
+    margin-top: 2rem;
+}
+.posts-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    max-width: 280px;
+    max-height: 340px;
+    border: 1px solid var(--gray-100);
+    border-radius: 1rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 6px 20px;
+}
+
+.post img {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.post h4{
+    margin-left: 0.8rem;
+    margin-right: 0.7rem;
+}
+.post-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    margin: 0.5rem 0.9rem;
+}
+
+.view-all-post{
+    text-decoration: none;
+    margin: 2rem 1rem;
+    padding: 0.8rem 1.7rem;
+    border-radius: 1rem;
+    font-weight: 600;
+    background-color: var(--gray-600);
+    color: white;
+    font-size: 0.8rem;
+}
+
 .categories-container{
     display: flex;
     align-items: center;
@@ -138,6 +203,10 @@ header{
 
     body{
         padding: 0;
+    }
+
+    .head-content{
+        margin: 10%;
     }
 
     .head-content p{
