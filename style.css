@@ -9,8 +9,8 @@
     --gray-700: #364767;
     --gray-800: #183153;
     --gray-900: #001c40;
-    --h1: 2rem;
-    --h2: 1.5rem;
+    --h1: 3rem;
+    --h2: 2rem;
 }
 
 body{
@@ -18,10 +18,14 @@ body{
     padding: 0;
     background-color: #f5f7f7;
     color: rgba(0, 0, 0, 0.65);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: "Beiruti", sans-serif;
+    font-optical-sizing: auto;
     overflow: auto;
 }
 
+h1, h2, h3, h4{
+    font-family: "Rubik", sans-serif;;
+}
 .header-container{
     width: auto;
     height: 5rem;
@@ -55,17 +59,18 @@ header{
 }
 
 main{
+    width: 100%;
+    height: 100%;
     
 }
 .head-content{
-    width: auto;
-    height: max-content;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 1.5rem;
-    margin: 3rem 20%;
+    padding: 1rem;
+    margin: 3rem 10%;
     /* border: 1px solid var(--gray-400);
     border-radius: 1rem;
     background-color: #e6f2ff; */
@@ -74,13 +79,16 @@ main{
 .head-content h2{
     margin: 0;
     font-size: var(--h2);
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 1.2;
+    word-spacing: 0.2rem;
 }
 
 .head-content p{
     letter-spacing: 0.04rem;
     padding-left: 5rem;
     padding-right: 5rem;
+    font-size: 1.2rem;
 }
 
 .search-container {
