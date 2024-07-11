@@ -9,6 +9,8 @@
     --gray-700: #364767;
     --gray-800: #183153;
     --gray-900: #001c40;
+    --h1: 2rem;
+    --h2: 1.5rem;
 }
 
 body{
@@ -71,11 +73,14 @@ main{
 
 .head-content h2{
     margin: 0;
-    font-size: 1.7rem;
+    font-size: var(--h2);
+    font-weight: 700;
 }
 
 .head-content p{
-    letter-spacing: 0.08rem;
+    letter-spacing: 0.04rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
 }
 
 .search-container {
@@ -213,6 +218,7 @@ main{
 
     .head-content p{
         letter-spacing: 0.02rem;
+        padding: 0;
     }
 
     #search-bar{
