@@ -271,4 +271,8 @@ main{
     #search-bar{
         width: 10rem;
     }
+
+    .post{
+        max-width: 320px;
+    }
 }
