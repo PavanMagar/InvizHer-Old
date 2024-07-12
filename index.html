@@ -21,10 +21,17 @@
 <div class="header-container">
     <header>
         <div class="header-items">
-            <i class="fa-solid fa-bars"></i>
+            <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
             <h1 class="title"><a href="#">InvizHer</a></h1>
+            <div class="sidebar" id="mySidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#clients">Clients</a>
+                <a href="#contact">Contact</a>
+            </div>
             <div class="header-icons">
-                <i class="fa-solid fa-laptop-code"></i>
+                <i class="fa-solid fa-fire"></i>
             </div>
         </div>
     </header>
@@ -73,7 +80,7 @@
     </section>
 
 
-
+    <section class="categories">
        <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem;">Explore Categories</h2>
        <div class="categories-container">
         <div class="category"><i class="fa-solid fa-gears"></i><div class="cate-name"><p>Latest</p><p>Projects</p></div></div>
@@ -83,7 +90,9 @@
         <div class="category"><i class="fa-solid fa-lightbulb"></i><div class="cate-name"><p>Projects</p><p>Ideas</p></div></div>
         <div class="category"><i class="fa-solid fa-file-pen"></i><div class="cate-name"><p>Question</p><p>Paprs</p></div></div>
        </div>
+    </section>
 
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
