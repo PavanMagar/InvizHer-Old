@@ -206,20 +206,19 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 3.5rem;
+    gap: 2.4rem;
     flex-wrap: wrap;
     margin: 2rem 0;
-    background-color: #e6f2ff;
+    /* background-color: #e6f2ff; */
     padding: 1.5rem 0.5rem;
     border-radius: 1rem;
 
 }
 
 .category{
-    width: 4rem;
-    height: 4rem;
+    width: 6rem;
+    height: 1rem;
     display: flex;
-    flex-direction: column;
     align-items: center;
     border: 1px solid var(--gray-400);
     padding: 1rem;
@@ -227,8 +226,22 @@ main{
     background-color: white;
 }
 
+.cate-name{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    padding: 0.4rem 0.8rem;
+    border-left: 1px solid var(--gray-400);
+}
+
+.cate-name p{
+    margin: 0;
+    font-size: 0.8rem;
+    font-family: "Rubik", sans-serif;
+}
 .category i{
-    font-size: 1.8rem;
+    font-size: 1rem;
+    margin-right: 0.6rem;
 }
 @media only screen and (max-width: 768px) {
 
