@@ -151,7 +151,7 @@ main{
     max-height: 340px;
     border: 1px solid var(--gray-100);
     border-radius: 1rem;
-    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 40px;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
 }
 
 .post img {
@@ -165,13 +165,13 @@ main{
     text-align: start;
     margin: 1rem 0.8rem 0 0.7rem;
     font-weight: 600;
-    line-height: 1.3;
+    line-height: 1.4;
     word-spacing: 0.1rem;
     
 }
 
 .post h2 a{
-    color: rgba(0, 0, 0, 0.65);
+    color: var(--gray-600);
     text-decoration: none;
 }
 .post-info{
@@ -220,10 +220,12 @@ main{
     height: 1rem;
     display: flex;
     align-items: center;
-    border: 1px solid var(--gray-400);
+    border: 1px solid var(--gray-200);
     padding: 1rem;
     border-radius: 0.8rem;
     background-color: white;
+    box-shadow: rgba(216, 219, 222, 0.656) 2px 4px 100px;
+    cursor: pointer;
 }
 
 .cate-name{
@@ -231,17 +233,19 @@ main{
     flex-direction: column;
     align-items: start;
     padding: 0.4rem 0.8rem;
-    border-left: 1px solid var(--gray-400);
+    border-left: 1px solid var(--gray-200);
 }
 
 .cate-name p{
     margin: 0;
     font-size: 0.8rem;
     font-family: "Rubik", sans-serif;
+    color: var(--gray-500);
 }
 .category i{
     font-size: 1rem;
     margin-right: 0.6rem;
+    color: var(--gray-600);
 }
 @media only screen and (max-width: 768px) {
 
@@ -253,6 +257,10 @@ main{
         margin: 10%;
         align-items: start;
         text-align: start;
+    }
+
+    .head h2{
+        font-size: 1.7rem;
     }
 
     .head p{
