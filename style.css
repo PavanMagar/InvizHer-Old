@@ -24,7 +24,7 @@ body{
 }
 
 h1, h2, h3, h4{
-    font-family: "Rubik", sans-serif;;
+    font-family: "Rubik", sans-serif;
 }
 .header-container{
     width: auto;
@@ -54,7 +54,7 @@ header{
 
 .title a{
     text-decoration: none;
-    color: var(--gray-800);
+    color: var(--gray-00);
     font-size: 1.8rem;
 }
 
@@ -63,7 +63,7 @@ main{
     height: 100%;
     
 }
-.head-content{
+.head{
 
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ main{
     background-color: #e6f2ff; */
 }
 
-.head-content h2{
+.head h2{
     margin: 0;
     font-size: var(--h2);
     font-weight: 600;
@@ -84,7 +84,7 @@ main{
     word-spacing: 0.2rem;
 }
 
-.head-content p{
+.head p{
     letter-spacing: 0.04rem;
     padding-left: 5rem;
     padding-right: 5rem;
@@ -132,7 +132,7 @@ main{
     align-items: center;
 }
 
-.posts h2 {
+.posts p {
     margin-top: 2rem;
 }
 .posts-container{
@@ -151,7 +151,7 @@ main{
     max-height: 340px;
     border: 1px solid var(--gray-100);
     border-radius: 1rem;
-    box-shadow: rgba(216, 219, 222, 0.2) 0px 6px 20px;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 40px;
 }
 
 .post img {
@@ -160,9 +160,19 @@ main{
     border-radius: 1rem 1rem 0 0;
 }
 
-.post h4{
-    margin-left: 0.8rem;
-    margin-right: 0.7rem;
+.post h2{
+    font-size: 1rem;
+    text-align: start;
+    margin: 1rem 0.8rem 0 0.7rem;
+    font-weight: 600;
+    line-height: 1.3;
+    word-spacing: 0.1rem;
+    
+}
+
+.post h2 a{
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
 }
 .post-info{
     display: flex;
@@ -173,6 +183,11 @@ main{
     margin: 0.5rem 0.9rem;
 }
 
+.post-info p{
+    letter-spacing: 0.02rem;
+    font-size: 0.7rem;
+    font-family: "Rubik", sans-serif;
+}
 .view-all-post{
     text-decoration: none;
     margin: 2rem 1rem;
@@ -182,6 +197,9 @@ main{
     background-color: var(--gray-600);
     color: white;
     font-size: 0.8rem;
+    font-family: "Rubik", sans-serif;
+    letter-spacing: 0.08px;
+    font-weight: 500;
 }
 
 .categories-container{
@@ -218,13 +236,13 @@ main{
         padding: 0;
     }
 
-    .head-content{
+    .head{
         margin: 10%;
         align-items: start;
         text-align: start;
     }
 
-    .head-content p{
+    .head p{
         letter-spacing: 0.02rem;
         padding: 0;
     }
