@@ -318,7 +318,7 @@ main{
     .sidebar {
         flex-direction: column;
         align-items: center;
-        justify-content: start;
+        justify-content: center;
         height: 100%;
         width: 100%;
         position: fixed;
@@ -326,7 +326,7 @@ main{
         top: 0;
         background-color: #f5f7f7;
         overflow-x: hidden;
-        transition: ease-in-out 2s;
+        transition: ease 1.5s;
         
       }
 
@@ -340,11 +340,11 @@ main{
       }
 
       #mySidebar{
-        left: -800px;
+        left: -720px;
       }
 
       .nav-list{
-        background-color: #F0F0F0;
+        background-color: var(--gray-100);
         flex-wrap: wrap;
         align-items: center;
         margin: 1rem;
@@ -359,25 +359,26 @@ main{
         width: 40%;
         margin: 1rem 0.8rem;
         border-radius: 0.8rem;
-        background-color: #dedede;
+        background-color: #efefef;
       }
       
       .nav-list li i{
         display: inline-block;
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: var(--gray-600);
-        margin: 0.6rem;
+        margin: 0.8rem;
       }
       
       .nav-list li a {
         padding: 8px 2px;
         text-decoration: none;
-        font-size: 1.1rem;
+        font-size: 0.8rem;
         letter-spacing: 0.02rem;
         color: var(--gray-600);
         display: block;
         transition: 0.3s;
         margin: 0;
+        font-family: "Rubik", sans-serif;
         
       }
       
@@ -389,10 +390,10 @@ main{
         display: flex;
       }
       .sidebar .closebtn {
-        background-color: #F0F0F0;
+        background-color: var(--gray-100);
         color: white;
         position: absolute;
-        top: 15px;
+        top: 30px;
         right: 20px;
         font-size: 26px;
         margin-left: 50px;
