@@ -386,7 +386,7 @@ main{
       }
       
       .social{
-        display: block;
+        display: flex;
       }
       .sidebar .closebtn {
         background-color: #F0F0F0;
