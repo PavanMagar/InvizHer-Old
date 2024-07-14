@@ -147,7 +147,7 @@ main{
     font-size: 1.2rem;
 }
 
-.search-container {
+.search-form {
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -155,7 +155,7 @@ main{
     padding: 5px;
 }
 
-#search-bar {
+#searchQuery {
     border: 1px solid #ccc;
     border-radius: 1rem;
     padding: 0.7rem 1rem;
@@ -163,11 +163,11 @@ main{
     outline: none;
 }
 
-#search-bar:focus {
+#searchQuery:focus {
     border-color: var(--gray-500);
 }
 
-#search-button {
+.search-button {
     background-color: var(--gray-500);
     border: none;
     border-radius: 0.9rem;
@@ -178,8 +178,59 @@ main{
     font-size: 0.9rem;
 }
 
-#search-button:hover {
+.search-button:hover {
     background-color: var(--gray-700);
+}
+
+.search-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.error-message {
+    color: red;
+    text-align: center;
+}
+
+.results-list {
+    list-style: none;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.results-list.show {
+    max-height: 500px; /* Adjust based on content */
+}
+
+.results-list li {
+    margin: 10px 0;
+    background: var(--gray-100);
+    border-radius: 6px;
+    transition: background-color 0.3s, opacity 0.5s ease-in-out;
+    opacity: 0;
+    border: 1px solid var(--gray-100);
+}
+
+.results-list li.show {
+    opacity: 1;
+}
+
+.results-list a {
+    letter-spacing: 0.02rem;
+    word-spacing: 1px;
+    font-size: 1.1rem;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: var(--gray-600);
+    
+}
+
+.results-list li:hover {
+    background-color: var(--gray-400);
 }
 
 .posts{
@@ -200,6 +251,7 @@ main{
 }
 
 .post{
+    background-color: white;
     display: flex;
     flex-direction: column;
     margin: 2rem;
