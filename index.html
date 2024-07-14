@@ -49,11 +49,14 @@
     <section class="head">
         <h2>Make Your Coding Journey Easier</h2>
         <p>Here we go with latest coding projects, new initiative ideas, coding resources and all what you need as programmer.</p>
-        <div class="search-container">
-            <input type="text" id="search-bar" placeholder="Search Here...">
-            <button type="button" id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
-       </div>
+    <div class="search-container">
+        <form id="searchForm" class="search-form">
+            <input type="text" id="searchQuery" placeholder="Search Here..." class="search-input">
+            <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <p id="errorMessage" class="error-message"></p>
+        <ul id="results" class="results-list"></ul>
+    </div>
     </section>
 
     <section class="posts">
@@ -90,7 +93,7 @@
 
 
     <section class="categories">
-       <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem;">Explore Categories</h2>
+       <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem; color: #515e7b;">Explore Categories</h2>
        <div class="categories-container">
         <div class="category"><i class="fa-solid fa-gears"></i><div class="cate-name"><p>Latest</p><p>Projects</p></div></div>
         <div class="category"><i class="fa-solid fa-file-code"></i><div class="cate-name"><p>Language</p><p>Notes</p></div></div>
@@ -102,6 +105,7 @@
     </section>
 
     </main>
+    <script src="articles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
