@@ -46,66 +46,136 @@
     </header>
 
     <main>
-    <section class="head">
-        <h2>Make Your Coding Journey Easier</h2>
-        <p>Here we go with latest coding projects, new initiative ideas, coding resources and all what you need as programmer.</p>
-    <div class="search-container">
-        <form id="searchForm" class="search-form">
-            <input type="text" id="searchQuery" placeholder="Search Here..." class="search-input">
-            <button type="submit" class="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-        </form>
-        <p id="errorMessage" class="error-message"></p>
-        <ul id="results" class="results-list"></ul>
-    </div>
-    </section>
-
-    <section class="posts">
-        <div class="posts-container">
-            <article class="post">
-                <img src="html.jpg" alt="Post Thumbnail Image">
-                <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+        <section class="head">
+            <h2>Make Your Coding Journey Easier</h2>
+            <p>Here we go with latest coding projects, new initiative ideas, coding resources and all what you need as programmer.</p>
+        <div class="search-container">
+            <div class="search-bar">
+                <input type="text" class="search-form" id="searchInput" placeholder="Search posts...">
+                <button type="submit" class="search-button" id="searchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        
+            
+        </div>
+        </section>
+    
+        <section class="posts">
+            <div class="tag-buttons">
+                <button class="tag-button active" data-tag="all">All</button>
+                <button class="tag-button" data-tag="projects">Projects</button>
+                <button class="tag-button" data-tag="notes">Notes</button>
+                <button class="tag-button" data-tag="webdev">Webdev</button>
+                <button class="tag-button" data-tag="interview">Interview</button>
+                <button class="tag-button" data-tag="questions">Questions</button>
+                <button class="tag-button" data-tag="others">Others</button>
+            </div>
+            <div class="posts-container">
+                <article class="post" data-post="1" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
                     <div class="post-info">
                         <p>Github Project</p>
                         <p>12-04-2024</p>
                     </div>
-            </article>
-
-            <article class="post">
-                <img src="html.jpg" alt="Post Thumbnail Image">
-                <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                </article>
+    
+                <article class="post" data-post="2" data-tag="notes">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
                     <div class="post-info">
                         <p>12-04-2024</p>
                         <p>Know More</p>
                     </div>
-            </article>
-
-            <article class="post">
-                <img src="html.jpg" alt="Post Thumbnail Image">
-                <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                </article>
+    
+                <article class="post" data-post="3" data-tag="notes">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
                     <div class="post-info">
                         <p>12-04-2024</p>
                         <p>Know More</p>
                     </div>
-            </article>
-        </div>
-        <a href="#" class="view-all-post">View all Posts</a>
-    </section>
+                </article>
+    
+                <article class="post" data-post="4" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+    
+                <article class="post" data-post="5" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+                <article class="post" data-post="5" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+                <article class="post" data-post="5" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+                <article class="post" data-post="5" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+                <article class="post" data-post="5" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">NOTE
+                        
+                        to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+    
+                <article class="post" data-post="6" data-tag="projects">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+            </div>
+            <a href="#" class="view-all-post" id="viewAllPostsBtn">View all Posts</a>
+        </section>
+    
+        <div id="toast" class="toast">No more posts available</div>
 
-
-    <section class="categories">
-       <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem; color: #515e7b;">Explore Categories</h2>
-       <div class="categories-container">
-        <div class="category"><i class="fa-solid fa-gears"></i><div class="cate-name"><p>Latest</p><p>Projects</p></div></div>
-        <div class="category"><i class="fa-solid fa-file-code"></i><div class="cate-name"><p>Language</p><p>Notes</p></div></div>
-        <div class="category"><i class="fa-solid fa-clipboard-question"></i><div class="cate-name"><p>Interview</p><p>Questions</p></div></div>
-        <div class="category"><i class="fa-brands fa-html5"></i><div class="cate-name"><p>WebDev</p><p>Projects</p></div></div>
-        <div class="category"><i class="fa-solid fa-lightbulb"></i><div class="cate-name"><p>Projects</p><p>Ideas</p></div></div>
-        <div class="category"><i class="fa-solid fa-file-pen"></i><div class="cate-name"><p>Question</p><p>Paprs</p></div></div>
-       </div>
-    </section>
+        <section class="categories">
+            <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem; color: #515e7b;">Explore Categories</h2>
+            <div class="categories-container">
+             <div class="category"><i class="fa-solid fa-gears"></i><div class="cate-name"><p>Latest</p><p>Projects</p></div></div>
+             <div class="category"><i class="fa-solid fa-file-code"></i><div class="cate-name"><p>Language</p><p>Notes</p></div></div>
+             <div class="category"><i class="fa-solid fa-clipboard-question"></i><div class="cate-name"><p>Interview</p><p>Questions</p></div></div>
+             <div class="category"><i class="fa-brands fa-html5"></i><div class="cate-name"><p>WebDev</p><p>Projects</p></div></div>
+             <div class="category"><i class="fa-solid fa-lightbulb"></i><div class="cate-name"><p>Projects</p><p>Ideas</p></div></div>
+             <div class="category"><i class="fa-solid fa-file-pen"></i><div class="cate-name"><p>Question</p><p>Paprs</p></div></div>
+            </div>
+         </section>
 
     </main>
-    <script src="articles.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
