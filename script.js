@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function () {
         setTimeout(() => {
             const filteredPosts = tag === 'all' ? posts : document.querySelectorAll(`.post[data-tag="${tag}"]`);
             if (filteredPosts.length === 0) {
-                showToast('No posts found, Try another.');
+                showToast('Nothing found here.');
             } else {
                 for (let i = 0; i < Math.min(filteredPosts.length, visiblePosts); i++) {
                     filteredPosts[i].style.display = 'block';
@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (!found) {
-            showToast('No posts found');
+            showToast('Post not found, try another.');
         }
     }
 
