@@ -190,6 +190,9 @@ main{
     justify-content: center;
 }
 
+.posts-main{
+    margin-top:4rem;
+}
 
 .posts{
     display: flex;
