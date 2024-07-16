@@ -118,7 +118,8 @@ header{
 }
 
 main{
-    width: 100%;
+    width: auto;
+    padding: 0 15%;
     height: 100%;
     
 }
@@ -147,7 +148,7 @@ main{
     font-size: 1.2rem;
 }
 
-.search-form {
+.search-bar {
     margin-top: 1rem;
     display: flex;
     align-items: center;
@@ -155,7 +156,7 @@ main{
     padding: 5px;
 }
 
-#searchQuery {
+.search-form {
     border: 1px solid #ccc;
     border-radius: 1rem;
     padding: 0.7rem 1rem;
@@ -163,7 +164,7 @@ main{
     outline: none;
 }
 
-#searchQuery:focus {
+.search-form:focus {
     border-color: var(--gray-500);
 }
 
@@ -188,50 +189,7 @@ main{
     align-items: center;
     justify-content: center;
 }
-.error-message {
-    color: red;
-    text-align: center;
-}
 
-.results-list {
-    list-style: none;
-    padding: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s ease-in-out;
-}
-
-.results-list.show {
-    max-height: 500px; /* Adjust based on content */
-}
-
-.results-list li {
-    margin: 10px 0;
-    background: var(--gray-100);
-    border-radius: 6px;
-    transition: background-color 0.3s, opacity 0.5s ease-in-out;
-    opacity: 0;
-    border: 1px solid var(--gray-100);
-}
-
-.results-list li.show {
-    opacity: 1;
-}
-
-.results-list a {
-    letter-spacing: 0.02rem;
-    word-spacing: 1px;
-    font-size: 1.1rem;
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: var(--gray-600);
-    
-}
-
-.results-list li:hover {
-    background-color: var(--gray-400);
-}
 
 .posts{
     display: flex;
@@ -260,7 +218,71 @@ main{
     border: 1px solid var(--gray-100);
     border-radius: 1rem;
     box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
-}
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+    }
+        .post.show {
+            opacity: 1;
+        }
+        .tag-buttons {
+            margin: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .tag-button {
+            margin: 0.4rem 0.3rem;
+            padding: 6px 12px;
+            cursor: pointer;
+            border: 1px solid var(--gray-200);
+            border-radius: 0.5rem;
+            color: var(--gray-700);
+            font-family: var(--first-font);
+        }
+        .tag-button.active {
+            background-color: var(--gray-500);
+            color: white;
+        }
+        .toast {
+            visibility: hidden;
+            max-width: 1000px; 
+            margin: auto;
+            background-color: var(--gray-700);
+            color: white;
+            text-align: center;
+            border-radius: 2px;
+            padding: 14px 18px;
+            position: fixed;
+            z-index: 100;
+            left: 45%;
+            bottom: 30px;
+            font-size: 19px;
+            white-space: nowrap;
+            border-radius: 1rem;
+            letter-spacing: 0.02rem;
+        }
+        .toast.show {
+            visibility: visible;
+            -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        @-webkit-keyframes fadein {
+            from {bottom: 0; opacity: 0;} 
+            to {bottom: 30px; opacity: 1;}
+        }
+        @keyframes fadein {
+            from {bottom: 0; opacity: 0;}
+            to {bottom: 30px; opacity: 1;}
+        }
+        @-webkit-keyframes fadeout {
+            from {bottom: 30px; opacity: 1;} 
+            to {bottom: 0; opacity: 0;}
+        }
+        @keyframes fadeout {
+            from {bottom: 30px; opacity: 1;}
+            to {bottom: 0; opacity: 0;}
+        }
 
 .post img {
     width: 100%;
@@ -364,6 +386,10 @@ main{
     header{
         margin: 0;
         padding: 0 0 0 6%;
+    }
+
+    main{
+        padding: 0;;
     }
 
     .title a{
@@ -501,5 +527,9 @@ main{
 
     .post{
         max-width: 320px;
+    }
+
+    .toast{
+        left: 25%;
     }
 }
