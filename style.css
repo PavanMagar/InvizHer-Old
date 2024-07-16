@@ -237,6 +237,7 @@ main{
             cursor: pointer;
             border: 1px solid var(--gray-200);
             border-radius: 0.5rem;
+            background: transparent;
             color: var(--gray-700);
             font-family: var(--first-font);
         }
