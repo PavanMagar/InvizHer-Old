@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Linked Files-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+
+    <title>InvizHer Blog</title>
+    
+</head>
+<body>
+    <header>
+        <div class="header-items">
+            <h1 class="title"><a href="#">InvizHer</a></h1>
+            <nav class="sidebar" id="mySidebar">
+                <button class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></button>
+                <p>Explore More</p>
+                <ul class="nav-list">
+                    <li><i class="fa-solid fa-house"></i><a href="#Home">Home</a></li>
+                    <li><i class="fa-solid fa-file-pen"></i><a href="">Posts</a></li>
+                    <li><i class="fa-solid fa-file-code"></i><a href="">Notes</a></li>
+                    <li><i class="fa-brands fa-html5"></i><a href="">Webdev</a></li>
+                    <li><i class="fa-solid fa-gears"></i><a href="">Projects</a></li>
+                    <li><i class="fa-solid fa-clipboard-question"></i><a href="">Questions</a></li>
+                </ul>
+                <ul class="nav-list social">
+                    <li><i class="fa-brands fa-youtube"></i><a href="#Home">YouTube</a></li>
+                    <li><i class="fa-brands fa-square-github"></i><a href="">GitHub</a></li>
+                    <li><i class="fa-brands fa-square-x-twitter"></i><a href="">Twitter</a></li>
+                    <li><i class="fa-brands fa-linkedin"></i><a href="">Linkedin</a></li>
+                    <li><i class="fa-brands fa-instagram"></i><a href="">instagram</a></li>
+                    <li><i class="fa-brands fa-telegram"></i><a href="">Telegram</a></li>
+                </ul>
+            </nav>
+            <button class="openbtn" onclick="openNav()"><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="head">
+            <h2>Make Your Coding Journey Easier</h2>
+            <p>Here we go with latest coding projects, new initiative ideas, coding resources and all what you need as programmer.</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="posts-home">
+            <p class="latest-posts-name">Latest Posts</p>
+            <div class="posts-container">
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+    
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>12-04-2024</p>
+                        <p>Know More</p>
+                    </div>
+                </article>
+    
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>12-04-2024</p>
+                        <p>Know More</p>
+                    </div>
+                </article>
+    
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+    
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+
+                
+                <article class="post-home">
+                    <img src="html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                    <div class="post-info">
+                        <p>Github Project</p>
+                        <p>12-04-2024</p>
+                    </div>
+                </article>
+
+            </div>
+            <a href="#" class="view-all-post">View all Posts</a>
+        </section>
+
+        <section class="categories">
+            <h2 style="text-align: center; margin-top: 4rem; font-size: 1.4rem; color: #515e7b;">Explore Categories</h2>
+            <div class="categories-container">
+             <div class="category"><i class="fa-solid fa-gears"></i><div class="cate-name"><p>Latest</p><p>Projects</p></div></div>
+             <div class="category"><i class="fa-solid fa-file-code"></i><div class="cate-name"><p>Language</p><p>Notes</p></div></div>
+             <div class="category"><i class="fa-solid fa-clipboard-question"></i><div class="cate-name"><p>Interview</p><p>Questions</p></div></div>
+             <div class="category"><i class="fa-brands fa-html5"></i><div class="cate-name"><p>WebDev</p><p>Projects</p></div></div>
+             <div class="category"><i class="fa-solid fa-lightbulb"></i><div class="cate-name"><p>Projects</p><p>Ideas</p></div></div>
+             <div class="category"><i class="fa-solid fa-file-pen"></i><div class="cate-name"><p>Question</p><p>Paprs</p></div></div>
+            </div>
+         </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
