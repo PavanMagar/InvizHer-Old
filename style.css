@@ -199,7 +199,8 @@ main{
     padding: 2rem;
     border: 1px solid var(--gray-50);
     border-radius: 2rem;
-    margin: 1rem;
+    margin: 2rem 1rem;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
 }
 
 .posts p {
@@ -330,8 +331,8 @@ main{
     padding: 0.8rem 1.7rem;
     border-radius: 1rem;
     font-weight: 600;
-    background-color: var(--gray-600);
-    color: white;
+    border: 1px solid var(--gray-500);
+    color: var(--gray-600);
     font-size: 0.8rem;
     font-family: var(--first-font);
     letter-spacing: 0.08px;
@@ -540,7 +541,7 @@ main{
     }
 
     .tag-buttons{
-        max-width: 300px;
+        max-width: 280px;
     }
 
     .toast{
