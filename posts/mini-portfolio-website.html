@@ -63,7 +63,7 @@
                 </div>
             </div>
             <div class="article-main">
-                <p>Hey buddy! Good to see you here. As you know, today we are going to discuss about making of project "Responsive Mini Portfolio website using HTML CSS and JavaScript". This portfolio website is completely responsive with all devices. Also it is a completely ui/ux design based portfolio website. So without wasting too much time lets get start it to know about it.</p>
+                <p> <span id="greeting-message"></span> Good to see you here. As you know, today we are going to discuss about making of project "Responsive Mini Portfolio website using HTML CSS and JavaScript". This portfolio website is completely responsive with all devices. Also it is a completely ui/ux design based portfolio website. So without wasting too much time lets get start it to know about it.</p>
                  <br>
                 <h2>Mini Portfolio Website</h2>
                 <p>This is a simple and responsive portfolio website using HTML CSS and JavaScript. As it's name its a mini sized portfolio website, we used minimum sized components in it. The design of this portfolio website is little bit Ui and UX based. The overall look is just awesome. You can scroll down to watch it's live demo and source code.</p>
@@ -73,9 +73,11 @@
                 <p>This mini portfolio website is completely responsive with every device size. This means that whether a user is accessing the site from a desktop computer, a tablet, or a smartphone, the content and layout will adjust to provide an optimal viewing experience. Website will adjust size of its components automatically as per users device size.</p>
                 <br>
 
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkhY8iFC7S4EPTdyabhFfy9AImKWyFepypwaBjp230_vUEnD7xO8PmQbF13UZYEe2f0P-wiZZHVgQ4mrEUuGXI0cqf_OV9Ud6RG5mo_F66uWnFqznX9PhwEK2zdTNgDGB5Z4tIrpEAk6G0Nmo2LhqghfKOCyPfcv4rLGva1QgAPt2xpALmCggrtne_cGR4/s3264/20240518_111357.jpg" class="article-img" alt="article image"/>
+                <div class="article-img">
+                    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkhY8iFC7S4EPTdyabhFfy9AImKWyFepypwaBjp230_vUEnD7xO8PmQbF13UZYEe2f0P-wiZZHVgQ4mrEUuGXI0cqf_OV9Ud6RG5mo_F66uWnFqznX9PhwEK2zdTNgDGB5Z4tIrpEAk6G0Nmo2LhqghfKOCyPfcv4rLGva1QgAPt2xpALmCggrtne_cGR4/s3264/20240518_111357.jpg" alt="article image"/>
+                </div>
 
-                <h2>Features of Mini Portfolio Website</h2>
+                <h2>Features of Mini Portfolio</h2>
                 <ul>
                 <li>It is a fast and speedy to load.</li>
                 <li>It is a responsive with different sized device. Supports almost every device.</li>
@@ -108,6 +110,29 @@
         </div>
         
     </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const greetingMessage = document.getElementById('greeting-message');
+        
+            const now = new Date();
+            const hours = now.getHours();
+        
+            let greetingText = '';
+        
+            if (hours >= 5 && hours < 12) {
+                greetingText = 'Good Morning,';
+            } else if (hours >= 12 && hours < 17) {
+                greetingText = 'Good Afternoon,';
+            } else if (hours >= 17 && hours < 20) {
+                greetingText = 'Good Evening,';
+            } else {
+                greetingText = 'Good Night,';
+            }
+        
+            greetingMessage.textContent = greetingText;
+        });
+        </script>
+        
     <script src="https://pavanmagar.github.io/InvizHer/script.js"></script>
 </body>
 </html>
