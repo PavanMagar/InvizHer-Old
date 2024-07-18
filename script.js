@@ -7,7 +7,25 @@ function openNav() {
     document.getElementById("mySidebar").style.left = "-720px";
   }
 
-  
+document.addEventListener('DOMContentLoaded', function() {
+    const url = window.location.href;
+    document.querySelectorAll('.share-buttons a').forEach(btn => {
+        const href = btn.getAttribute('href');
+        btn.setAttribute('href', href.replace('[URL]', encodeURIComponent(url)));
+    });
+});
+
+function copyToClipboard() {
+    const dummy = document.createElement('input');
+    const text = window.location.href;
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand('copy');
+    document.body.removeChild(dummy);
+    alert('Link copied to clipboard');
+}
+
 document.addEventListener('DOMContentLoaded', function () {
     const tagButtons = document.querySelectorAll('.tag-button');
     const posts = document.querySelectorAll('.post');
