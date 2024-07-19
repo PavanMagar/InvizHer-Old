@@ -18,7 +18,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #f5f7f7;
+    background-color: #effef7;
     color: rgba(0, 0, 0, 0.65);
     font-family: var(--second-font);
     font-optical-sizing: auto;
@@ -33,11 +33,8 @@ header{
     height: fit-content;
     position: sticky;
     top: 0;
-    background-color: white;
-    border-bottom: 1px solid var(--gray-100);
     margin: 0;
     padding: 0 18%;  
-    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
 }
 
 .header-items{
@@ -169,7 +166,7 @@ main{
 }
 
 .search-button {
-    background-color: var(--gray-500);
+    background-color: #1acd81;
     border: none;
     border-radius: 0.9rem;
     color: white;
@@ -246,7 +243,7 @@ main{
             font-family: var(--first-font);
         }
         .tag-button.active {
-            background-color: var(--gray-500);
+            background-color: #1acd81;
             color: white;
         }
         .toast {
