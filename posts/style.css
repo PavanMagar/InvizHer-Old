@@ -149,7 +149,7 @@
     }
 
     .article-info{
-        width: 100%;
+        width: 90%;
     }
 
     .article-main{
@@ -180,7 +180,7 @@
     display: inline-block;
     width: 40px;
     height: 40px;
-    background-color: var(--gray-100);
+    background-color: var(--blue-200);
     color: #000;
     border-radius: 1rem;
     display: flex;
