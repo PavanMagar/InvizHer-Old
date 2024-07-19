@@ -166,7 +166,7 @@ main{
 }
 
 .search-button {
-    background-color: #1acd81;
+    background-color: #875cf6;
     border: none;
     border-radius: 0.9rem;
     color: white;
@@ -243,7 +243,7 @@ main{
             font-family: var(--first-font);
         }
         .tag-button.active {
-            background-color: #1acd81;
+            background-color: #875cf6;
             color: white;
         }
         .toast {
