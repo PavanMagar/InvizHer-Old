@@ -218,7 +218,7 @@ main{
     padding: 2rem;
     border: 1px solid var(--gray-50);
     border-radius: 2rem;
-    /* margin: 2rem 1rem; */
+    margin: 2rem 1rem;
     box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
 }
 
