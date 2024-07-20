@@ -7,8 +7,8 @@
 
     <!--Linked Files-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://pavanmagar.github.io/InvizHer/style.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="icon" type="image/x-icon" href="../assets/img/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Beiruti:wght@200..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -110,29 +110,36 @@
         </div>
         
     </main>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const greetingMessage = document.getElementById('greeting-message');
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h2>InvizHer</h2>
+                <p>Here we go with latest coding projects, new initiative ideas, coding resources, components and all what you need as programmer.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-social">
+                    Social
+                    <a href="#">GitHub</a>
+                    <a href="#">YouTube</a>
+                    <a href="#">Instgram</a>
+                </div>
+                <div class="footer-pages">
+                    Pages
+                    <a href="#">Terms</a>
+                    <a href="#">Privacy</a>
+                    <a href="#">Disclimer</a>
+                </div>
+                <div class="footer-support">
+                    Support
+                    <a href="#">About</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">Made with ❤️ by InvizHer - 2024</p>
+    </footer>
         
-            const now = new Date();
-            const hours = now.getHours();
-        
-            let greetingText = '';
-        
-            if (hours >= 5 && hours < 12) {
-                greetingText = 'Good Morning,';
-            } else if (hours >= 12 && hours < 17) {
-                greetingText = 'Good Afternoon,';
-            } else if (hours >= 17 && hours < 20) {
-                greetingText = 'Good Evening,';
-            } else {
-                greetingText = 'Good Night,';
-            }
-        
-            greetingMessage.textContent = greetingText;
-        });
-        </script>
-        
-    <script src="https://pavanmagar.github.io/InvizHer/script.js"></script>
+    <script src="../assets/js/script.js"></script>
 </body>
 </html>
