@@ -639,7 +639,7 @@ footer{
     }
 
     .post{
-        max-width: 350px;
+        max-width: 370px;
     }
 
     .tag-buttons{
@@ -648,6 +648,11 @@ footer{
 
     .toast{
         left: 25%;
+    }
+
+    .category{
+        max-width: 300px;
+        margin: 0 1rem;
     }
 
     footer{
