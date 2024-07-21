@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Linked Files-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/primary.css" />
     <link rel="stylesheet" href="../assets/css/secondary.css" />
@@ -45,7 +46,7 @@
     </header>
     
     <main class="posts-main">
-        <section class="head">
+        <section class="head" data-aos="fade-down">
         <div class="search-container">
             <div class="search-bar">
                 <input type="text" class="search-form" id="searchInput" placeholder="Search posts...">
@@ -53,7 +54,7 @@
             </div>
         </div>
         </section>
-        <section class="posts">
+        <section class="posts" data-aos="fade-up">
             <div class="tag-buttons">
                 <button class="tag-button active" data-tag="all">All</button>
                 <button class="tag-button" data-tag="projects">Projects</button>
@@ -189,7 +190,7 @@
         </div>
         <p class="copyright">Made with love by InvizHer - 2024</p>
     </footer>
-    <script src="../assets/js/scrollreveal.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
