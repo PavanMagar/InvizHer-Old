@@ -67,147 +67,134 @@ function copyToClipboard() {
 // Tags and Search Feature
 
 document.addEventListener('DOMContentLoaded', function () {
-    const tagButtons = document.querySelectorAll('.tag-button');
-    const posts = document.querySelectorAll('.post');
-    const viewAllBtn = document.getElementById('viewAllPostsBtn');
-    const searchInput = document.getElementById('searchInput');
-    const searchButton = document.getElementById('searchButton');
-    const toast = document.getElementById('toast');
-    let visiblePosts = 6;
+            const tagButtons = document.querySelectorAll('.tag-button');
+            const posts = document.querySelectorAll('.post');
+            const viewAllBtn = document.getElementById('viewAllPostsBtn');
+            const toast = document.getElementById('toast');
+            const searchInput = document.getElementById('searchInput');
+            let visiblePosts = 6;
 
-    tagButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tag = button.getAttribute('data-tag');
-            filterPosts(tag);
-            updateURL(tag);
-            setActiveButton(button);
-        });
-    });
+            tagButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const tag = button.getAttribute('data-tag');
+                    filterPosts(tag);
+                    updateURL(tag);
+                    setActiveButton(button);
+                });
+            });
 
-    viewAllBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        loadMorePosts();
-    });
+            viewAllBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                loadMorePosts();
+            });
 
-    searchButton.addEventListener('click', () => {
-        const query = searchInput.value.toLowerCase();
-        searchPosts(query);
-    });
+            searchInput.addEventListener('input', () => {
+                const query = searchInput.value.toLowerCase();
+                searchPosts(query);
+            });
 
-    // Filter posts based on the selected tag
-    function filterPosts(tag) {
-        posts.forEach(post => {
-            post.classList.remove('show');
-            setTimeout(() => {
-                post.style.display = 'none';
-            }, 500);
-        });
+            // Filter posts based on the selected tag
+            function filterPosts(tag) {
+                let postCount = 0;
+                posts.forEach(post => {
+                    const tags = post.getAttribute('data-tags').split(',');
+                    if (tag === 'all' || tags.includes(tag)) {
+                        post.style.display = 'block';
+                        setTimeout(() => {
+                            post.style.opacity = '1';
+                        }, 0);
+                        postCount++;
+                    } else {
+                        post.style.display = 'none';
+                        post.style.opacity = '0';
+                    }
+                });
+                visiblePosts = postCount;
+            }
 
-        setTimeout(() => {
-            const filteredPosts = tag === 'all' ? posts : document.querySelectorAll(`.post[data-tag="${tag}"]`);
-            if (filteredPosts.length === 0) {
-                showToast('Nothing found here.');
-            } else {
-                for (let i = 0; i < Math.min(filteredPosts.length, visiblePosts); i++) {
-                    filteredPosts[i].style.display = 'block';
-                    setTimeout(() => {
-                        filteredPosts[i].classList.add('show');
-                    }, 10);
+            // Search posts based on the input
+            function searchPosts(query) {
+                let found = false;
+                posts.forEach(post => {
+                    const title = post.querySelector('.post-title a').textContent.toLowerCase();
+                    if (title.includes(query)) {
+                        post.style.display = 'block';
+                        setTimeout(() => {
+                            post.style.opacity = '1';
+                        }, 0);
+                        found = true;
+                    } else {
+                        post.style.display = 'none';
+                        post.style.opacity = '0';
+                    }
+                });
+                if (!found) {
+                    showToast('No posts found');
                 }
             }
-        }, 500);
-    }
 
-    // Update the URL to reflect the selected tag
-    function updateURL(tag) {
-        const newURL = tag === 'all' ? window.location.pathname : `${window.location.pathname}?tag=${tag}`;
-        history.pushState(null, '', newURL);
-    }
-
-    // Set active button
-    function setActiveButton(activeButton) {
-        tagButtons.forEach(button => {
-            button.classList.remove('active');
-        });
-        activeButton.classList.add('active');
-    }
-
-    // Load more posts
-    function loadMorePosts() {
-        const currentTag = document.querySelector('.tag-button.active').getAttribute('data-tag');
-        const filteredPosts = currentTag === 'all' ? posts : document.querySelectorAll(`.post[data-tag="${currentTag}"]`);
-        const hiddenPosts = Array.from(filteredPosts).filter(post => post.style.display === 'none');
-        if (hiddenPosts.length > 0) {
-            for (let i = 0; i < Math.min(hiddenPosts.length, 3); i++) {
-                hiddenPosts[i].style.display = 'block';
-                setTimeout(() => {
-                    hiddenPosts[i].classList.add('show');
-                }, 10);
+            // Update the URL to reflect the selected tag
+            function updateURL(tag) {
+                const newURL = tag === 'all' ? window.location.pathname : `${window.location.pathname}?tag=${tag}`;
+                history.pushState(null, '', newURL);
             }
-        } else {
-            showToast('No more posts available.');
-        }
-    }
 
-    // Search posts
-    function searchPosts(query) {
-        let found = false;
-        posts.forEach(post => {
-            const title = post.querySelector('.post-title a').textContent.toLowerCase();
-            if (title.includes(query)) {
-                post.style.display = 'block';
-                setTimeout(() => {
-                    post.classList.add('show');
-                }, 10);
-                found = true;
-            } else {
-                post.classList.remove('show');
-                setTimeout(() => {
-                    post.style.display = 'none';
-                }, 500);
+            // Set active button
+            function setActiveButton(activeButton) {
+                tagButtons.forEach(button => {
+                    button.classList.remove('active');
+                });
+                activeButton.classList.add('active');
             }
+
+            // Load more posts when "View all Posts" button is clicked
+            function loadMorePosts() {
+                const hiddenPosts = Array.from(posts).filter(post => post.style.display === 'none');
+                if (hiddenPosts.length === 0) {
+                    showToast('No more posts available');
+                    return;
+                }
+                for (let i = 0; i < Math.min(hiddenPosts.length, 3); i++) {
+                    hiddenPosts[i].style.display = 'block';
+                    setTimeout(() => {
+                        hiddenPosts[i].style.opacity = '1';
+                    }, 0);
+                }
+            }
+
+            // Show toast notification
+            function showToast(message) {
+                toast.textContent = message;
+                toast.className = 'toast show';
+                setTimeout(() => {
+                    toast.className = toast.className.replace('show', '');
+                }, 3000);
+            }
+
+            // Check URL on page load to apply the filter if a tag is present
+            function checkURL() {
+                const params = new URLSearchParams(window.location.search);
+                const tag = params.get('tag');
+                if (tag) {
+                    filterPosts(tag);
+                    setActiveButton(document.querySelector(`.tag-button[data-tag="${tag}"]`));
+                } else {
+                    loadInitialPosts();
+                }
+            }
+
+            // Load initial posts on page load
+            function loadInitialPosts() {
+                for (let i = 0; i < visiblePosts; i++) {
+                    posts[i].style.display = 'block';
+                    setTimeout(() => {
+                        posts[i].style.opacity = '1';
+                    }, 0);
+                }
+            }
+
+            checkURL();
         });
-
-        if (!found) {
-            showToast('Post not found, try another.');
-        }
-    }
-
-    // Show toast notification
-    function showToast(message) {
-        toast.textContent = message;
-        toast.className = 'toast show';
-        setTimeout(() => {
-            toast.className = toast.className.replace('show', '');
-        }, 3000);
-    }
-
-    // Check URL on page load to apply the filter if a tag is present
-    function checkURL() {
-        const params = new URLSearchParams(window.location.search);
-        const tag = params.get('tag') || 'all';
-        const activeButton = document.querySelector(`.tag-button[data-tag="${tag}"]`);
-        if (activeButton) {
-            setActiveButton(activeButton);
-            filterPosts(tag);
-        } else {
-            filterPosts('all');
-        }
-    }
-
-    // Initially show the first 6 posts
-    function showInitialPosts() {
-        for (let i = 0; i < Math.min(posts.length, visiblePosts); i++) {
-            posts[i].style.display = 'block';
-            setTimeout(() => {
-                posts[i].classList.add('show');
-            }, 10);
-        }
-    }
-
-    checkURL();
-    showInitialPosts();
-});
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
 AOS.init({
