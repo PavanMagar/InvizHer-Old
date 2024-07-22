@@ -382,8 +382,10 @@ main{
     display: flex;
     flex-direction: column;
     padding: 1rem;
-    background-color: var(--blue-100);
+    background-color: white;
     border-radius: 1rem;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
+    border: 1px solid var(--gray-50);
 }
 
 .trending-box h2{
@@ -403,7 +405,7 @@ main{
 .exp-icon{
     font-size: 0.8rem;
     padding: 0.7rem;
-    background-color: white;
+    background-color: var(--blue-200);
     border-radius: 50%;
 }
 
