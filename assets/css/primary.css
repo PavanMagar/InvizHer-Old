@@ -410,14 +410,15 @@ main{
 }
 
 .trending-item h3{
+    font-size: 15px;
     text-align: start;
     padding: 0 1.5rem;
+    line-height: 1.4rem;
 }
 
 .trending-item h3 a{
     text-decoration: none;
     color: var(--gray-600);
-    font-size: 0.9rem;
     text-wrap: wrap;  
 }
 
