@@ -209,10 +209,20 @@ document.addEventListener('DOMContentLoaded', function () {
     showInitialPosts();
 });
 
-/*=============== SCROLL REVEAL ANIMATION ===============*/
-AOS.init({
-    duration: 1200, // Animation duration in milliseconds
-    offset: 200, // Offset from the original trigger point
-    easing: 'ease-in-out-sine', // Easing function
-    delay: 100, // Delay in milliseconds
-  });
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const elements = document.querySelectorAll('.inz-fade');
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    elements.forEach(element => {
+        observer.observe(element);
+    });
+});
