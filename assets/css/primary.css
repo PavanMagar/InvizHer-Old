@@ -366,6 +366,7 @@ main{
 .trending{
     padding: 5%;
     margin-bottom: 2rem;
+    overflow: hidden;
 }
 
 .trending-container{
@@ -427,6 +428,10 @@ main{
     word-spacing: 1px;
 }
 
+.categories{
+    padding-bottom: 2rem;
+}
+
 .categories-container{
     display: flex;
     align-items: center;
@@ -480,6 +485,58 @@ main{
     padding: 1rem;
     border-radius: 1rem;
 }
+
+.github-profile{
+    margin: 2rem 0;
+}
+
+.github-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.visit-github{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+
+}
+
+.visit-github h3{
+    margin: 0;
+}
+
+.github-img{
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+.github-img img{
+    width: 100%;
+}
+
+.github-link {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.github-link a{
+    padding: 1rem 1.2rem;
+    background-color: var(--gray-800);
+    color: white;
+    border-radius: 0.6rem;
+    word-spacing: 1px;
+}
+
+.github-link a i{
+    font-size: 0.8rem;
+}
+
 
 footer{
     background-color: var(--gray-800);
@@ -699,7 +756,7 @@ footer{
     }
 
     .posts{
-        padding: 2rem 0.5rem;
+        padding: 2rem 0.5rem 0 0.5rem;
     }
 
     .post{
@@ -726,6 +783,10 @@ footer{
     .category{
         max-width: 300px;
         margin: 0 1rem;
+    }
+
+    .github-container{
+        flex-direction: column;
     }
 
     footer{
