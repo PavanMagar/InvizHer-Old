@@ -419,6 +419,7 @@ main{
     text-align: start;
     padding: 0 0 0 1.5rem;
     line-height: 1.6rem;
+    font-weight: 500;
 }
 
 .trending-item h3 a{
@@ -431,6 +432,81 @@ main{
     text-align: center;
     margin-top: 1.2rem;
     word-spacing: 1px;
+}
+
+.languages h2{
+    text-align: center;
+    margin: 4rem 0 3rem 0;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.language {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    max-width: 270px;
+    flex: 1 0 calc(33.33% - 10px); /* Three items per row on desktop */
+    box-sizing: border-box;
+    border: 1px solid var(--gray-100);
+    transition: all 0.5s ease;
+    border-radius: 1rem;
+    box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
+    padding: 2px;
+
+}
+
+.language h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.language svg {
+    width: 22px;
+    background-color: var(--blue-400);
+    color: white;
+    padding: 0 7px;
+    border-radius: 50%;
+    margin: 0 1rem;
+}
+
+.svg-padding{
+    padding: 6px;
+}
+.hidden {
+    display: none;
+}
+.show-more-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.show-more{
+    background-color:transparent;
+    text-decoration: none;
+    margin: 2rem 1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 1rem;
+    border: 1px solid var(--blue-500);
+    color: var(--blue-500);
+    font-size: 0.8rem;
+    font-family: var(--first-font);
+    letter-spacing: 0.08px;
+    font-weight: 500;
+    cursor: pointer;
+
+}
+
+@media (max-width: 768px) {
+    .language-container .language {
+        flex: 1 0 calc(80% - 10px); /* Two items per row on mobile */
+    }
 }
 
 .categories{
@@ -495,6 +571,10 @@ main{
     margin: 2rem 0;
 }
 
+.github-profile h2{
+    text-align: center; margin: 4rem 0; font-size: 1.4rem; color: #515e7b;
+}
+
 .github-container{
     display: flex;
     align-items: center;
@@ -531,15 +611,23 @@ main{
 }
 
 .github-link a{
-    padding: 1rem 1.2rem;
-    background-color: var(--gray-800);
-    color: white;
+    padding: 10px 1rem;
+    background-color: var(--blue-100);
+    color: var(--blue-500);
     border-radius: 0.6rem;
     word-spacing: 1px;
+    border: 1px solid var(--blue-500);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.github-link a:hover{
+    background-color: var(--blue-400);
+    color: var(--gray-700);
 }
 
 .github-link a i{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 
@@ -794,6 +882,10 @@ footer{
         flex-direction: column;
     }
 
+    .github-profile h2{
+        display: none;
+    }
+
     .github-link{
         display: none;
     }
@@ -821,6 +913,7 @@ footer{
         justify-content: space-between;
     }
 }
+
 
 .inz-fade {
     opacity: 0;
