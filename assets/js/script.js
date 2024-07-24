@@ -92,6 +92,7 @@ document.addEventListener('DOMContentLoaded', function () {
     searchButton.addEventListener('click', () => {
         const query = searchInput.value.toLowerCase();
         searchPosts(query);
+        updateSearchURL(query);
     });
 
     // Filter posts based on the selected tag
@@ -104,9 +105,18 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         setTimeout(() => {
-            const filteredPosts = tag === 'all' ? posts : document.querySelectorAll(`.post[data-tag="${tag}"]`);
+            let filteredPosts;
+            if (tag === 'all') {
+                filteredPosts = posts;
+            } else {
+                filteredPosts = Array.from(posts).filter(post => {
+                    const tags = post.getAttribute('data-tags').split(',');
+                    return tags.includes(tag);
+                });
+            }
+
             if (filteredPosts.length === 0) {
-                showToast('Nothing found here.');
+                showToast('No posts found');
             } else {
                 for (let i = 0; i < Math.min(filteredPosts.length, visiblePosts); i++) {
                     filteredPosts[i].style.display = 'block';
@@ -124,6 +134,12 @@ document.addEventListener('DOMContentLoaded', function () {
         history.pushState(null, '', newURL);
     }
 
+    // Update the URL to reflect the search query
+    function updateSearchURL(query) {
+        const newURL = query ? `${window.location.pathname}?search=${query}` : window.location.pathname;
+        history.pushState(null, '', newURL);
+    }
+
     // Set active button
     function setActiveButton(activeButton) {
         tagButtons.forEach(button => {
@@ -135,7 +151,15 @@ document.addEventListener('DOMContentLoaded', function () {
     // Load more posts
     function loadMorePosts() {
         const currentTag = document.querySelector('.tag-button.active').getAttribute('data-tag');
-        const filteredPosts = currentTag === 'all' ? posts : document.querySelectorAll(`.post[data-tag="${currentTag}"]`);
+        let filteredPosts;
+        if (currentTag === 'all') {
+            filteredPosts = posts;
+        } else {
+            filteredPosts = Array.from(posts).filter(post => {
+                const tags = post.getAttribute('data-tags').split(',');
+                return tags.includes(currentTag);
+            });
+        }
         const hiddenPosts = Array.from(filteredPosts).filter(post => post.style.display === 'none');
         if (hiddenPosts.length > 0) {
             for (let i = 0; i < Math.min(hiddenPosts.length, 3); i++) {
@@ -145,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }, 10);
             }
         } else {
-            showToast('No more posts available.');
+            showToast('No more posts available');
         }
     }
 
@@ -169,7 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         if (!found) {
-            showToast('Post not found, try another.');
+            showToast('No posts found');
         }
     }
 
@@ -182,16 +206,21 @@ document.addEventListener('DOMContentLoaded', function () {
         }, 3000);
     }
 
-    // Check URL on page load to apply the filter if a tag is present
+    // Check URL on page load to apply the filter if a tag or search query is present
     function checkURL() {
         const params = new URLSearchParams(window.location.search);
         const tag = params.get('tag') || 'all';
+        const searchQuery = params.get('search') || '';
         const activeButton = document.querySelector(`.tag-button[data-tag="${tag}"]`);
         if (activeButton) {
             setActiveButton(activeButton);
             filterPosts(tag);
         } else {
             filterPosts('all');
+        }
+        if (searchQuery) {
+            searchInput.value = searchQuery;
+            searchPosts(searchQuery);
         }
     }
 
@@ -224,5 +253,40 @@ document.addEventListener('DOMContentLoaded', function () {
 
     elements.forEach(element => {
         observer.observe(element);
+    });
+});
+
+
+// languages show more
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.language');
+    const showMoreBtn = document.querySelector('.show-more');
+    const mobileBreakpoint = 768;
+    let currentVisible = window.innerWidth <= mobileBreakpoint ? 4 : 6;
+
+    const updateVisibility = () => {
+        items.forEach((item, index) => {
+            if (index < currentVisible) {
+                item.classList.remove('hidden');
+            } else {
+                item.classList.add('hidden');
+            }
+        });
+    };
+
+    const showMore = () => {
+        currentVisible += window.innerWidth <= mobileBreakpoint ? 4 : 6;
+        updateVisibility();
+        if (currentVisible >= items.length) {
+            showMoreBtn.style.display = 'none';
+        }
+    };
+
+    showMoreBtn.addEventListener('click', showMore);
+    updateVisibility();
+
+    window.addEventListener('resize', () => {
+        currentVisible = window.innerWidth <= mobileBreakpoint ? 4 : 6;
+        updateVisibility();
     });
 });
