@@ -262,7 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const items = document.querySelectorAll('.language');
     const showMoreBtn = document.querySelector('.show-more');
     const mobileBreakpoint = 768;
-    let currentVisible = window.innerWidth <= mobileBreakpoint ? 4 : 6;
+    let currentVisible = 6;
+    let showMoreClicked = false;
 
     const updateVisibility = () => {
         items.forEach((item, index) => {
@@ -275,10 +276,12 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const showMore = () => {
-        currentVisible += window.innerWidth <= mobileBreakpoint ? 4 : 6;
+        showMoreClicked = true;
+        currentVisible += window.innerWidth <= mobileBreakpoint ? 4 : 3;
         updateVisibility();
         if (currentVisible >= items.length) {
-            showMoreBtn.style.display = 'none';
+            showMoreBtn.textContent = 'No more items';
+            showMoreBtn.disabled = true;
         }
     };
 
@@ -286,7 +289,9 @@ document.addEventListener('DOMContentLoaded', () => {
     updateVisibility();
 
     window.addEventListener('resize', () => {
-        currentVisible = window.innerWidth <= mobileBreakpoint ? 4 : 6;
-        updateVisibility();
+        if (!showMoreClicked) {
+            currentVisible = 6;
+            updateVisibility();
+        }
     });
 });
