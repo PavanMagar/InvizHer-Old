@@ -122,6 +122,27 @@
     margin: 1rem 0;
 }
 
+.article-buttons{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.button{
+    margin-right: 1em;
+    margin: 1.34em 0;
+    padding: .667em 2em;
+    border: 1px solid var(--blue-300);
+    border-radius: 30px;
+    background-color: var(--blue-100);
+    color: var(--gray-600);
+    text-decoration: none!important;
+    font-size: .888em!important;
+    word-spacing: .04em;
+    cursor: pointer;
+}
 
 @media only screen and (max-width: 768px) {
 
