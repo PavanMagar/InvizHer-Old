@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Linked Files-->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../assets/css/primary.css" />
     <link rel="stylesheet" href="../assets/css/secondary.css" />
@@ -46,7 +45,7 @@
     </header>
     
     <main class="posts-main">
-        <section class="head" data-aos="fade-down">
+        <section class="head">
         <div class="search-container">
             <div class="search-bar">
                 <input type="text" class="search-form" id="searchInput" placeholder="Search posts...">
@@ -54,107 +53,67 @@
             </div>
         </div>
         </section>
-        <section class="posts" data-aos="fade-up">
+        <section class="posts">
             <div class="tag-buttons">
                 <button class="tag-button active" data-tag="all">All</button>
                 <button class="tag-button" data-tag="projects">Projects</button>
                 <button class="tag-button" data-tag="notes">Notes</button>
                 <button class="tag-button" data-tag="webdev">Webdev</button>
-                <button class="tag-button" data-tag="interview">Interview</button>
-                <button class="tag-button" data-tag="questions">Questions</button>
-                <button class="tag-button" data-tag="others">Others</button>
+                <button class="tag-button" data-tag="c">C</button>
+                <button class="tag-button" data-tag="c++">C++</button>
+                <button class="tag-button" data-tag="html">HTML</button>
+                <button class="tag-button" data-tag="css">CSS</button>
+                <button class="tag-button" data-tag="js">JS</button>
+                <button class="tag-button" data-tag="java">Java</button>
+                <button class="tag-button" data-tag="python">Python</button>
+                <button class="tag-button" data-tag="sql">SQL</button>
+                <button class="tag-button" data-tag="go">GO</button>
+                <button class="tag-button" data-tag="dsa">DSA</button>
             </div>
+
             <div class="posts-container">
-                <article class="post" data-post="1" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects,webdev">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="posts/mini-portfolio-website.html">Mini Portfolio Website Using HTML CSS and JavaScript</a></h2>
+                </article>
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
+                </article>
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">NOTE to do list in html. Get All Html Knowledge Here</a></h2>
                 </article>
     
-                <article class="post" data-post="2" data-tag="notes">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>12-04-2024</p>
-                        <p>Know More</p>
-                    </div>
-                </article>
-    
-                <article class="post" data-post="3" data-tag="notes">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
-                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>12-04-2024</p>
-                        <p>Know More</p>
-                    </div>
-                </article>
-    
-                <article class="post" data-post="4" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
-                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
-                </article>
-    
-                <article class="post" data-post="5" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
-                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
                 </article>
 
-                <article class="post" data-post="5" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
                 </article>
 
-                <article class="post" data-post="5" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
                 </article>
 
-                <article class="post" data-post="5" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
                 </article>
 
-                <article class="post" data-post="5" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
-                    <h2 class="post-title"><a href="#">NOTEto do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
-                </article>
-    
-                <article class="post" data-post="6" data-tag="projects">
-                    <img src="html.jpg" alt="Post Thumbnail Image">
+                <article class="post" data-tags="projects">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
                     <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
-                    <div class="post-info">
-                        <p>Github Project</p>
-                        <p>12-04-2024</p>
-                    </div>
                 </article>
 
+                <article class="post" data-tags="projects,notes">
+                    <img src="../assets/img/html.jpg" alt="Post Thumbnail Image">
+                    <h2 class="post-title"><a href="#">How to do list in html. Get All Html Knowledge Here</a></h2>
+                </article>
             </div>
             <a href="#" class="view-all-post" id="viewAllPostsBtn">View all Posts</a>
             <div id="toast" class="toast">No more posts available</div>
@@ -188,9 +147,8 @@
                 </div>
             </div>
         </div>
-        <p class="copyright">Made with love by InvizHer - 2024</p>
+        <p class="copyright">© InvizHer 2024 - All Rights Reserved.</p>
     </footer>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../assets/js/script.js"></script>
 </body>
 </html>
