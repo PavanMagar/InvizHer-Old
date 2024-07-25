@@ -386,7 +386,7 @@ main{
     flex-direction: column;
     padding: 1rem;
     background-color: white;
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
     border: 1px solid var(--gray-50);
 }
@@ -446,6 +446,11 @@ main{
     padding: 1.4rem;
 }
 
+.language-container a{
+    text-decoration: none;
+    color: var(--gray-600);
+}
+
 .language {
     background-color: white;
     display: flex;
@@ -455,7 +460,7 @@ main{
     box-sizing: border-box;
     border: 1px solid var(--gray-100);
     transition: all 0.5s ease;
-    border-radius: 1rem;
+    border-radius: 12px;
     box-shadow: rgba(216, 219, 222, 0.656) 4px 12px 100px;
     padding: 2px;
 
@@ -499,12 +504,6 @@ main{
     font-weight: 500;
     cursor: pointer;
 
-}
-
-@media (max-width: 768px) {
-    .language-container .language {
-        flex: 1 0 calc(30% - 10px); /* Two items per row on mobile */
-    }
 }
 
 .categories{
@@ -874,6 +873,24 @@ footer{
     .category{
         max-width: 300px;
         margin: 0 1rem;
+    }
+
+    .language-container{
+        padding: 1.8rem;
+    }
+
+    .language{
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .language svg{
+        position: relative;
+        top: -20px;
+    }
+
+    .language h3{
+        margin-top: 0.5rem;
     }
 
     .github-container{
