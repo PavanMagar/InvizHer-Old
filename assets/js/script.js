@@ -60,7 +60,7 @@ function copyToClipboard() {
     dummy.select();
     document.execCommand('copy');
     document.body.removeChild(dummy);
-    alert('Link copied to clipboard. Now you share this link anywhere you want.');
+    alert('Link copied to clipboard. Now paste it anywhere you want.');
 }
 
 
