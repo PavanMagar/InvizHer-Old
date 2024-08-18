@@ -44,6 +44,11 @@ a:hover{
 h1, h2, h3, h4 {
     font-family: var(--first-font);
 }
+
+section {
+    margin-top: 4rem;
+}
+
 header{
     width: auto;
     height: fit-content;
@@ -434,7 +439,24 @@ main{
 
 .languages h2{
     text-align: center;
-    margin: 4rem 0 3rem 0;
+    margin: 6rem 0 1rem 0;
+}
+
+.lang-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.lang-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+}
+
+.lang-img img{
+    max-width: 100%;
+    margin-top: 2rem;
 }
 
 .language-container {
@@ -884,6 +906,14 @@ footer{
         margin-bottom: 1rem;
     }
 
+    .lang-box{
+        flex-direction: column;
+    }
+
+    .lang-img{
+        max-width: 300px;
+    }
+
     .language svg{
         position: relative;
         top: -20px;
@@ -898,10 +928,6 @@ footer{
     }
 
     .github-profile h2{
-        display: none;
-    }
-
-    .github-link{
         display: none;
     }
 
