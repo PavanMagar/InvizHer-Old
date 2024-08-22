@@ -328,3 +328,48 @@ function type() {
 }
 
 type();
+
+//tag button selected : show msg
+document.addEventListener('DOMContentLoaded', function () {
+    const tagButtons = document.querySelectorAll('.tag-button');
+    const searchButton = document.getElementById('searchButton');
+    const searchInput = document.getElementById('searchInput');
+    const filterMessage = document.getElementById('filterMessage');
+
+    tagButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tag = button.getAttribute('data-tag');
+            showFilterMessage(tag, '');
+        });
+    });
+
+    searchButton.addEventListener('click', () => {
+        const query = searchInput.value.trim();
+        if (query) {
+            showFilterMessage('', query);
+            updateSearchURL(query);
+        }
+    });
+
+    function showFilterMessage(tag, query) {
+        if (tag && tag !== 'all') {
+            filterMessage.textContent = `results for :  ${tag}`;
+        } else if (query) {
+            filterMessage.textContent = `search results for : "${query}"`;
+        } else {
+            filterMessage.textContent = ''; // No message for 'All' or empty search
+        }
+    }
+
+    function updateSearchURL(query) {
+        const params = new URLSearchParams(window.location.search);
+        params.set('search', query);
+        history.pushState(null, '', `${window.location.pathname}?${params.toString()}`);
+    }
+
+    // Call showFilterMessage() on page load to handle any tag selection or search in the URL
+    const params = new URLSearchParams(window.location.search);
+    const initialTag = params.get('tag') || 'all';
+    const initialSearch = params.get('search') || '';
+    showFilterMessage(initialTag !== 'all' ? initialTag : '', initialSearch);
+});
