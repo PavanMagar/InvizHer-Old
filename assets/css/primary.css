@@ -76,6 +76,29 @@ header.scrolled {
 .header-items h1{
     margin: 1rem;
 }
+
+#text-container {
+    display: inline-block;
+    width: 100px; /* Adjust based on the maximum width of your phrases */
+    text-align: left; /* Align text to the left */
+    white-space: nowrap;
+}
+
+#text::after {
+    content: '|';
+    animation: blink 1s infinite;
+    margin-left: 2px; /* Space between text and cursor */
+}
+
+@keyframes blink {
+    0%, 50% {
+        opacity: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+    }
+}
+
 .header-items h1 a{
     margin-right: 1rem;
 }
