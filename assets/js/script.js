@@ -1,3 +1,34 @@
+const textElement = document.getElementById('text');
+const phrases = ["Easier..", "Faster.."];
+let currentPhraseIndex = 0;
+let currentLetterIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentPhrase = phrases[currentPhraseIndex];
+    const currentText = currentPhrase.slice(0, currentLetterIndex);
+
+    textElement.textContent = currentText;
+
+    if (isDeleting) {
+        currentLetterIndex--;
+        if (currentLetterIndex === 0) {
+            isDeleting = false;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+        }
+    } else {
+        currentLetterIndex++;
+        if (currentLetterIndex === currentPhrase.length) {
+            isDeleting = true;
+        }
+    }
+
+    const delay = isDeleting ? 100 : 150;
+    setTimeout(type, delay);
+}
+
+type();
+
 
 //Navbar functionality
 function openNav() {
