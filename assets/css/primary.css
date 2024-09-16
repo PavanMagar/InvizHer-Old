@@ -793,6 +793,8 @@ footer{
     color: var(--gray-400);
     word-spacing: 2px;
 }
+
+
 @media only screen and (max-width: 768px) {
 
     body{
@@ -800,8 +802,13 @@ footer{
     }
 
     header{
-        margin: 0;
+        top: 10px;
+        margin: 10px;
         padding: 0 1% 0 6%;
+    }
+
+    header.scrolled {
+        border-radius: 1rem;
     }
 
     main{
